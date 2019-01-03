@@ -393,7 +393,8 @@ function OpenVehicleSpawnerMenu(type, station, part, partNum)
 						elements = garage
 					}, function(data2, menu2)
 						if data2.current.stored then
-							local foundSpawn, spawnPoint = GetAvailableVehicleSpawnPoint(station, part, partNum)
+							-local foundSpawn, spawnPoint = GetAvailableVehicleSpawnPoint(station, part, partNum)
+							+local foundSpawn, spawnPoint = GetAvailableVehicleSpawnPoint(station, 'Vehicles', partNum)
 
 							if foundSpawn then
 								menu2.close()
